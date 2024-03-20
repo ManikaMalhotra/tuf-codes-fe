@@ -42,7 +42,7 @@
 
 .title {
   color: var(--light-color);
-  font-weight: 700;
+  font-weight: 700 !important;
   user-select: none;
 }
 

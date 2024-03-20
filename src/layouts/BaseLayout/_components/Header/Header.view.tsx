@@ -1,40 +1,40 @@
-import { useState } from 'react';
 import { Container, Group, Burger, Transition, Stack } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.css';
 import TufLogo from '../TufLogo';
+import Link from 'next/link';
 
 const links = [
-  { link: '/about', label: 'Features' },
-  { link: '/pricing', label: 'Pricing' },
-  { link: '/learn', label: 'Learn' },
-  { link: '/community', label: 'Community' },
+  { label: 'Twitter', link: 'https://twitter.com/striver_79' },
+  { label: 'Instagram', link: 'https://www.instagram.com/striver_79' },
+  { label: 'Telegram', link: 'https://t.me/Competitive_Programming_tuf' },
+  { label: 'A2Z Sheet  ', link: 'https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/' }
 ];
 
 const Header = () => {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
 
   const items = links.map((link) => (
-    <a
+    <Link
       key={link.label}
       href={link.link}
       className={classes.link}
-      data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(link.link);
-      }}
+      target='_blank'
     >
       {link.label}
-    </a>
+    </Link>
   ));
 
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
         <TufLogo textColor="var(--light-color)" />
-        <Group gap={5} visibleFrom="xs" className={classes.group}>
+        <Group 
+          style={{ '--group-gap': 'unset' }}
+          gap={5} 
+          visibleFrom="xs" 
+          className={classes.group}
+        >
           {items}
         </Group>
         <Burger 

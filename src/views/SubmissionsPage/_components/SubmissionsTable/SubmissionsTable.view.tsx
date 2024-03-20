@@ -81,11 +81,7 @@ const SubmissionsTable = ({ data }: { data: RowData[] }) => {
               >
                 Code Language
               </CustomTableHead>
-              <CustomTableHead
-                sorted={false}
-                reversed={false}
-                onSort={() => {}}
-              >
+              <CustomTableHead sorted={false} reversed={false}>
                 Stdin
               </CustomTableHead>
               <CustomTableHead
@@ -95,7 +91,7 @@ const SubmissionsTable = ({ data }: { data: RowData[] }) => {
               >
                 Submission Timestamp
               </CustomTableHead>
-              <CustomTableHead sorted={false} reversed={false} onSort={() => {}}>
+              <CustomTableHead sorted={false} reversed={false}>
                 Source Code
               </CustomTableHead>
             </Table.Tr>

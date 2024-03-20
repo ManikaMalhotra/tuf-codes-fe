@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 10000;
   height: 60px;
   padding: 0 20px;
   display: flex;
@@ -39,6 +39,14 @@
   color: var(--light-color);
   text-decoration: none;
   transition: color 100ms ease;
+  padding: 10px 35px;
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: none;
+  background-color: #953a28;
 }
 
 .dropdown {
@@ -52,20 +60,6 @@
   right: 0;
 }
 
-.dropdown a {
-  padding: 10px 35px;
-  color: var(--light-color);
-  text-decoration: none;
-}
-
-.dropdown a:hover {
-  background-color: var(--primary-color);
-}
-
 .dropdown:last-child {
   padding-bottom: 10px;
-}
-
-.mantine-Burger-burger {
-  background-color: var(--light-color);
 }

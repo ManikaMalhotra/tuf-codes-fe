@@ -17,7 +17,7 @@ const data = [
       { label: 'Follow on Twitter', link: 'https://twitter.com/striver_79' },
       { label: 'Instagram', link: 'https://www.instagram.com/striver_79' },
       { label: 'Telegram', link: 't.me/Competitive_Programming_tuf' },
-      { label: 'A2Z Sheet  ', link: '#' },
+      { label: 'A2Z Sheet  ', link: 'https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/' },
     ],
   },
 ];

@@ -10,5 +10,5 @@ export type ThProps = {
   children: React.ReactNode;
   reversed: boolean;
   sorted: boolean;
-  onSort(): void;
+  onSort?: () => void;
 }

@@ -1,17 +1,8 @@
 :root {
   --primary-color: #007bff;
   --secondary-color: #ec3713;
-  --success-color: #28a745;
-  --info-color: #17a2b8;
-  --warning-color: #ffc107;
-  --danger-color: #dc3545;
   --light-color: #f8f9fa;
   --dark-color: #343a40;
-  --link-color: #007bff;
-  --link-hover-color: #0056b3;
-  --link-hover-text-decoration: underline;
-  --border-radius: 0.25rem;
-  --transition: all 0.5s ease-in-out;
   --secondary-background-color: #dd6851;
 }
 
@@ -30,4 +21,20 @@ body {
   box-sizing: border-box;
   background-color: #f4f4f4;
   color: var(--dark-color);
+}
+
+.mantine-Burger-burger {
+  background-color: var(--light-color) !important;
+}
+
+.mantine-Burger-burger[data-opened] {
+  background-color: transparent !important;
+}
+
+.mantine-Burger-burger::after {
+  background-color: var(--light-color) !important;
+}
+
+.mantine-Burger-burger::before {
+  background-color: var(--light-color) !important;
 }
