@@ -30,7 +30,7 @@ const SubmissionsPage = () => {
   if (error) {
     return (
       <div style={{ display: "flex", padding: "10px", alignItems: "center", justifyContent: "center" }}>
-        <Text color="red">An error occurred: {error.message}</Text>
+        <Text color="red">An error occurred: {error}</Text>
       </div>
     );
   }
