@@ -4,30 +4,20 @@ import classes from './Footer.module.css';
 
 const data = [
   {
-    title: 'About',
-    links: [
-      { label: 'Features', link: '#' },
-      { label: 'Pricing', link: '#' },
-      { label: 'Support', link: '#' },
-      { label: 'Forums', link: '#' },
-    ],
-  },
-  {
     title: 'Project',
     links: [
-      { label: 'Contribute', link: '#' },
-      { label: 'Media assets', link: '#' },
-      { label: 'Changelog', link: '#' },
-      { label: 'Releases', link: '#' },
+      { label: 'Contribute', link: 'https://github.com/ManikaMalhotra/tuf-codes-fe' },
+      { label: 'Releases', link: 'https://github.com/ManikaMalhotra/tuf-codes-fe' },
     ],
   },
   {
     title: 'Community',
     links: [
-      { label: 'Join Discord', link: '#' },
-      { label: 'Follow on Twitter', link: '#' },
-      { label: 'Email newsletter', link: '#' },
-      { label: 'GitHub discussions', link: '#' },
+      { label: 'takeuforward.org', link: 'https://takeuforward.org/' },
+      { label: 'Follow on Twitter', link: 'https://twitter.com/striver_79' },
+      { label: 'Instagram', link: 'https://www.instagram.com/striver_79' },
+      { label: 'Telegram', link: 't.me/Competitive_Programming_tuf' },
+      { label: 'A2Z Sheet  ', link: '#' },
     ],
   },
 ];
