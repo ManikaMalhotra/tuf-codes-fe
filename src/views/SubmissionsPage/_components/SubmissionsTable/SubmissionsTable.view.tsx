@@ -19,17 +19,17 @@ const SubmissionsTable = ({ data }: { data: RowData[] }) => {
     const reversed = field === sortBy ? !reverseSortDirection : false;
     setReverseSortDirection(reversed);
     setSortBy(field);
-    setSortedData([ ...sortData(data, { sortBy: field, reversed, search }) ]);
+    setSortedData(sortData(data, { sortBy: field, reversed, search }));
   };
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.currentTarget;
     setSearch(value);
-    setSortedData([ ...sortData(data, { sortBy, reversed: reverseSortDirection, search: value }) ]);
+    setSortedData(sortData(data, { sortBy, reversed: reverseSortDirection, search: value }));
   };
 
-  const rows = sortedData.map((row) => (
-    <Table.Tr key={row.username}>
+  const rows = sortedData.map((row, idx) => (
+    <Table.Tr key={idx}>
       <Table.Td>{row.username}</Table.Td>
       <Table.Td>{row.codeLanguage}</Table.Td>
       <Table.Td>{row.stdin}</Table.Td>
