@@ -23,6 +23,8 @@ body {
   color: var(--dark-color);
 }
 
+/* Override mantine default styling */
+
 .mantine-Burger-burger {
   background-color: var(--light-color) !important;
 }
@@ -37,4 +39,8 @@ body {
 
 .mantine-Burger-burger::before {
   background-color: var(--light-color) !important;
+}
+
+.mantine-Modal-content {
+  margin-top: 40px !important;
 }
