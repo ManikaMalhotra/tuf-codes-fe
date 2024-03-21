@@ -36,3 +36,10 @@ export const sortData = (
 export const formatSourceCode = (sourceCode: string) => {
   return sourceCode.replace(/\\n/g, '\n').replace(/\\t/g, '    ').replace(/\\s/g, ' ');
 }
+
+export const parseISOString = (s: string) => {
+  var b = s.split(/\D+/);
+
+  //@ts-ignore - time fix
+  return new Date(Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6]));
+}

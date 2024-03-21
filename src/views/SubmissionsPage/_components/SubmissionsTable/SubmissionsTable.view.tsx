@@ -3,7 +3,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconSearch } from "@tabler/icons-react";
 import { useState } from "react";
 import { RowData } from "../../SubmissionsPage.types";
-import { sortData } from "./SubmissionsTable.helpers";
+import { parseISOString, sortData } from "./SubmissionsTable.helpers";
 import CustomTableHead from "../CustomTableHead";
 import CodeModal from "../CodeModal";
 
@@ -32,8 +32,16 @@ const SubmissionsTable = ({ data }: { data: RowData[] }) => {
     <Table.Tr key={idx}>
       <Table.Td>{row.username}</Table.Td>
       <Table.Td>{row.codeLanguage}</Table.Td>
-      <Table.Td>{row.stdin}</Table.Td>
-      <Table.Td>{row.submissionTimestamp}</Table.Td>
+      <Table.Td>{row.standardInput}</Table.Td>
+      <Table.Td>
+        <span style={{ fontWeight: "600" }}>
+          {parseISOString(row.createdAt).toLocaleTimeString()}
+        </span> 
+        &nbsp;on&nbsp;
+        <span style={{ fontWeight: "600" }}>
+          {parseISOString(row.createdAt).toDateString()}
+        </span>
+      </Table.Td>
       <Table.Td>
         <Button 
           onClick={() => {  
@@ -85,9 +93,9 @@ const SubmissionsTable = ({ data }: { data: RowData[] }) => {
                 Stdin
               </CustomTableHead>
               <CustomTableHead
-                sorted={sortBy === 'submissionTimestamp'}
+                sorted={sortBy === 'createdAt'}
                 reversed={reverseSortDirection}
-                onSort={() => setSorting('submissionTimestamp')}
+                onSort={() => setSorting('createdAt')}
               >
                 Submission Timestamp
               </CustomTableHead>

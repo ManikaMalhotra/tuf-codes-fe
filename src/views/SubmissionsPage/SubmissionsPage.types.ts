@@ -1,8 +1,8 @@
 export type RowData = {
   username: string;
   codeLanguage: string;
-  stdin: string;
-  submissionTimestamp: string;
+  standardInput: string;
+  createdAt: string;
   sourceCode: string;
 }
 
